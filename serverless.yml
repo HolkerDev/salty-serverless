@@ -1,0 +1,15 @@
+service: salty
+provider:
+  name: aws
+  runtime: rust
+plugins:
+  - serverless-rust
+package:
+  individually: true
+functions:
+  hello:
+    handler: salty-serverless
+    events:
+      - http:
+          path: /hello/{param}/{param}
+          method: GET

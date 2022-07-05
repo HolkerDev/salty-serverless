@@ -3,6 +3,12 @@ name = "salty-serverless"
 version = "0.1.0"
 edition = "2021"
 
+[[bin]]
+name = "application"
+path = "src/main.rs"
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+lambda-web = { version = "0.1.9", features=["rocket05"] }
+rocket = "0.5.0-rc.1"
