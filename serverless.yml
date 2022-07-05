@@ -7,9 +7,15 @@ plugins:
 package:
   individually: true
 functions:
-  hello:
+  findPlaceByName:
     handler: salty-serverless
     events:
       - http:
-          path: /hello/{param}/{param}
+          path: /places/
           method: GET
+
+custom:
+  rust:
+    dockerless: true
+    target: aarch64-apple-darwin
+    linker: clang
